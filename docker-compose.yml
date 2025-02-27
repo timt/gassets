@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gassets:
+    image: gassets:latest
+    container_name: gassets_app
+    ports:
+      - "8000:8000"  # Updated to match the app's running port
+    environment:
+      - ENVIRONMENT=local
+      - LOG_LEVEL=info
+    restart: unless-stopped
