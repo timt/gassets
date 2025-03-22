@@ -8,7 +8,7 @@ WORKDIR /app
 COPY build/libs/gassets.jar /app/gassets.jar
 
 # Expose the application port (adjust if needed)
-EXPOSE 8080
+EXPOSE 8000
 
 # Run the application
 CMD ["java", "-jar", "/app/gassets.jar"]
