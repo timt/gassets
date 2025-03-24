@@ -1,5 +1,5 @@
 # Use a base image with Kotlin & JDK
-FROM openjdk:21-jdk
+FROM bellsoft/liberica-openjdk-alpine:21
 
 # Set working directory inside the container
 WORKDIR /app
