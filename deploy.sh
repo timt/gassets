@@ -39,8 +39,10 @@ ssh -i $KEY_PATH $USER@$EC2_IP << EOF
   echo "▶ Loading image..."
   sudo docker load < gassets.tar
 
+  echo "Stop any existing container using port 80"
+  sudo docker rm -f gassets || true
   echo "▶ Running container..."
-  sudo docker run -d -p 80:$PORT gassets
+  sudo docker run -d -p 80:$PORT --name gassets gassets
 EOF
 
 
